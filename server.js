@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-app.get('/', function (req, res) {
+app.get('/set', function (req, res) {
   res.send('Hello World!')
   console.log('I ve got to the GET request. THank you, Alan')
 })

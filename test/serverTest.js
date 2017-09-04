@@ -14,13 +14,25 @@ describe('Array', function() {
 });
 
 describe('http', function(){
-  it('get / (testing GET request)', function(done) { // <= Pass in done callback
+  it('makes a get request on route set', function(done) { // <= Pass in done callback
     chai.request('http://localhost:4000')
-    .get('/')
+    .get('/set')
     .end(function(err, res) {
       expect(err).to.be.null;
       expect(res).to.have.status(200);
       done();                               // <= Call done to signal callback end
     });
   }) ;
+
+  it("handles query parameters", function(done){
+    chai.request('http://localhost:4000')
+    .get('/set')
+    .query({somekey: 'somevalue'})
+    .end(function(err, res){
+      expect(err).to.be.null;
+      expect(res).to.have.status(200);
+      done();
+    });
+  });
+  
 });

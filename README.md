@@ -1,11 +1,10 @@
 # Tech Tests
 
-### Used technologies
+### Used technologies for DB Server Tech Test:
 
 #### Testing
-Mocha https://mochajs.org/
-Chai http://chaijs.com/
+- [Mocha](https://mochajs.org/)
+- [Chai](http://chaijs.com/)
 
-####
-ExpressJS https://github.com/expressjs/express
-Fast, unopinionated, minimalist web framework for node
+#### App
+- [ExpressJS](https://github.com/expressjs/express)  Fast, unopinionated, minimalist web framework for node

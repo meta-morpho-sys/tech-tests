@@ -1,9 +1,17 @@
 const express = require('express')
 const app = express()
 
+var store;
+
 app.get('/set', function (req, res) {
-  res.send('Hello World!')
-  console.log('I ve got to the GET request. THank you, Alan')
+  res.send(req.query)
+  store = req.query
+  console.log('I ve got here.')
+})
+
+app.get('/get', function (req, res) {
+  res.send(store)
+  console.log(store)
 })
 
 app.listen(4000, function () {

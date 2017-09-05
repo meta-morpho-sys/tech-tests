@@ -15,6 +15,6 @@ app.get('/get', function (req, res) {
 })
 
 app.listen(4000, function () {
-  console.log('App listening on port 4000!')
+  console.log('Server listening on port 4000!')
   console.log('http://localhost:4000')
 })

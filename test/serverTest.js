@@ -15,21 +15,10 @@ describe('http', function(){
     });
   }) ;
 
-  it("handles query parameters", function(done){
+  it('gets what it sets #1', function(done){
     chai.request('http://localhost:4000')
     .get('/set')
-    .query({somekey: 'somevalue'})
-    .end(function(err, res){
-      expect(err).to.be.null;
-      expect(res).to.have.status(200);
-      done();
-    });
-  });
-
-  it('has a query parameter with given key', function(done){
-    chai.request('http://localhost:4000')
-    .get('/set')
-    .query({somekey: 'somevalue'})
+    .query({somekey: 'somevalue'}).end()
 
     chai.request('http://localhost:4000')
     .get('/get')
@@ -38,6 +27,22 @@ describe('http', function(){
       expect(err).to.be.null;
       expect(res).to.have.status(200);
       expect(res.text).to.equal('somevalue');
+      done();
+    });
+  });
+
+  it('gets what it sets #2', function(done){
+    chai.request('http://localhost:4000')
+    .get('/set')
+    .query({name: 'Bob'}).end()
+
+    chai.request('http://localhost:4000')
+    .get('/get')
+    .query({key: 'name'})
+    .end(function(err, res){
+      expect(err).to.be.null;
+      expect(res).to.have.status(200);
+      expect(res.text).to.equal('Bob');
       done();
     });
   });

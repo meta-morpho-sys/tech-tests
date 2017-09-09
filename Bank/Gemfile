@@ -4,6 +4,7 @@ ruby '2.4.1'
 
 # gem 'rake'
 # gem 'reek'
+gem 'money'
 gem 'rspec'
 gem 'rubocop'
 gem 'simplecov', require: false, group: :test

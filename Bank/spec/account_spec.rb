@@ -20,7 +20,7 @@ describe Account do
     end
   end
 
-  describe 'capital management' do
+  describe 'capital management:' do
     it 'lets you deposit an amount' do
       expect { @account.deposit(2) }.to change { @account.balance }.by(2)
     end
@@ -35,4 +35,5 @@ describe Account do
       expect { @account.withdraw(2) }.to change { @account.balance }.by(-2)
     end
   end
+
 end

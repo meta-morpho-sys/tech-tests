@@ -1,11 +1,11 @@
-require 'money'
+require 'app_money'
 require 'statement'
 
 class Account
 
   attr_reader :balance, :statement
 
-  def initialize initial_balance = 0
+  def initialize initial_balance = Money.new(0)
     @balance = initial_balance
     @statement = Statement.new
   end

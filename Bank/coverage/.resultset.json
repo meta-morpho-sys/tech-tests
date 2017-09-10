@@ -3,6 +3,7 @@
     "coverage": {
       "/Users/astarte/MAcourse/tech-tests/Bank/spec/account_spec.rb": [
         1,
+        1,
         null,
         1,
         1,
@@ -44,6 +45,7 @@
       ],
       "/Users/astarte/MAcourse/tech-tests/Bank/lib/account.rb": [
         1,
+        1,
         null,
         1,
         null,
@@ -68,7 +70,14 @@
         null,
         null
       ],
+      "/Users/astarte/MAcourse/tech-tests/Bank/lib/app_money.rb": [
+        1,
+        1
+      ],
       "/Users/astarte/MAcourse/tech-tests/Bank/lib/statement.rb": [
+        1,
+        null,
+        null,
         1,
         1,
         null,
@@ -79,7 +88,6 @@
         1,
         2,
         2,
-        null,
         1,
         null,
         null,
@@ -134,25 +142,45 @@
         null,
         null
       ],
+      "/Users/astarte/MAcourse/tech-tests/Bank/spec/money_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/astarte/MAcourse/tech-tests/Bank/spec/statement_spec.rb": [
         1,
-        null,
         1,
         null,
         1,
-        2,
-        2,
-        null,
-        null,
-        null,
-        null,
         null,
         1,
         2,
+        2,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        2,
         null,
         null,
         1,
         1,
+        1,
+        1,
+        null,
         1,
         2,
         null,
@@ -183,6 +211,6 @@
         null
       ]
     },
-    "timestamp": 1504977460
+    "timestamp": 1505078104
   }
 }

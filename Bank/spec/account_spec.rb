@@ -37,4 +37,13 @@ describe Account do
     end
   end
 
+  it 'updates statement with deposit transaction' do
+    @account.deposit(Money.new(2))
+    expect(@account.statement.transactions.length).to eql(1)
+  end
+
+  it 'updates statement with withdrawal transaction' do
+    @account.withdraw(Money.new(2))
+    expect(@account.statement.transactions.length).to eql(1)
+  end
 end

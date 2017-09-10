@@ -4,6 +4,8 @@ I18n.enforce_available_locales = false
 class Statement
   HEADER = "| date | credit | debit | balance |"
 
+  attr_reader :transactions
+
   def initialize
     @transactions = []
   end

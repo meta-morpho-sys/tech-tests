@@ -12,14 +12,14 @@ class Account
 
   def deposit amount
     @balance += amount
+    transaction = Transaction.new(amount, @balance)
+    @statement.add_transaction(transaction)
   end
 
   def withdraw amount
     @balance -= amount
+    transaction = Transaction.new(-amount, @balance)
+    @statement.add_transaction(transaction)
   end
 
-  private
-  def create_transaction
-    @transaction ||= Transaction.new(amount, balance_after_transaction)
-  end
 end

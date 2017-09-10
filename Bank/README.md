@@ -28,6 +28,7 @@ Given a client makes a deposit of 1000 on 10-01-2012
 ### Technologies used
 
 - Ruby 2.4.1
+- [Money gem](http://www.rubydoc.info/gems/money/frames)
 - bundler
 
 ### Testing

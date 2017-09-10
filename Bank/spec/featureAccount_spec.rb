@@ -1,6 +1,6 @@
 require 'account'
-require 'statement'
-require 'transaction'
+require 'app_money'
+
 
 describe 'Bank account statement' do
 
@@ -8,14 +8,25 @@ describe 'Bank account statement' do
     @account = Account.new
   end
 
-  xit 'prints a statement with all transactions' do
-    statement = <<TRANSACTIONS
+  it 'prints a statement with one deposit transaction' do
+    st_output = <<TRANSACTIONS
 | date | credit | debit | balance |
 |10/01/2012 | 1000.00 | | 1000.00 |
 TRANSACTIONS
 
-    @account.deposit(1000)
-    expect { @account.statement.print }.to output(statement).to_stdout
+    @account.deposit(Money.new(100000))
+    expect { @account.statement.print }.to output(st_output).to_stdout
+  end
+
+  xit 'prints a statement with one withdrawal transaction' do
+    st_output = <<TRANSACTIONS
+| date | credit | debit | balance |
+|14/01/2012 | | 500.00 | 500.00 |
+TRANSACTIONS
+
+    @account = Account.new(Money.new(100000))
+    @account.withdraw(Money.new(50000))
+    expect { @account.statement.print }.to output(st_output).to_stdout
   end
 
   # it 'prints a statement with all transactions' do

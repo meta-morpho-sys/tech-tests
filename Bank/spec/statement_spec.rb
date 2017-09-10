@@ -24,8 +24,4 @@ TRANSACTIONS
     expect { @statement.print }.to output(@st_output).to_stdout
 
   end
-# amount is undefined
-# don't like the Transaction.new(amount, balance_after_transaction)
-# repetition of class variables in the test
-
 end
